@@ -1,0 +1,30 @@
+@import './../../style/utils/mexin.module';
+
+.grid-favourites__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(1, 272px);
+  justify-content: center;
+  gap: 40px 16px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 272px);
+    justify-content: center;
+
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 272px);
+    justify-content: flex-start;
+
+  }
+
+  &__item {
+    width: 100%;
+  }
+}
