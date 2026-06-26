@@ -5,6 +5,9 @@ An interactive product catalog for gadgets built with React and Redux Toolkit.
 ## 🔗 Live Demo
 https://annaskobara.github.io/phone_catalogue_react_redux/
 
+## 🎨 Design Reference
+You can view the original design mockup for this project here: 👉 [Figma Design Link](https://www.figma.com/design/xMK2Dy0mfBbJJSNctmOuLW/Phone-catalog--V2--Rounded-Style-1?node-id=0-1&p=f&t=wlcLzJa7Cjbjz76K-0)
+
 ## 🧩 Description
 This is an educational project showcasing various phones, tablets, and accessories. Users can browse products, filter by categories, view detailed specifications, and manage a shopping cart and favorites list with fluid navigation and smooth animations.
 
@@ -28,4 +31,4 @@ This is an educational project showcasing various phones, tablets, and accessori
 * **Clone repository:** `git clone https://github.com/annaskobara/phone_catalogue_react_redux.git`
 * **Navigate into the project directory:** `cd phone_catalogue_react_redux`
 * **Install the dependencies:** `npm install`
-* **Run the app:** `npm run dev`
+* **Run the app:** `npm start`
