@@ -11,8 +11,6 @@
   background-color: $color-white;
   height: 100%;
 
-  /* 🌟 На мобілках займає 100% ширини сітки (288px між падінгами),
-     а на більших екранах обмежується max-width: 272px */
   width: 100%;
   max-width: 272px;
   margin: 0 auto;
