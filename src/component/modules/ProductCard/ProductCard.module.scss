@@ -11,10 +11,16 @@
   background-color: $color-white;
   height: 100%;
 
-  width: 100%;
-  max-width: 272px;
-  margin: 0 auto;
+  /* 🌟 Фіксована ширина картки для слайдера та десктопної сітки */
+  width: 272px;
+  min-width: 272px;
   box-sizing: border-box;
+
+  /* На мобільних пристроях розтягується на весь доступний екран (до 272px) */
+  @media (max-width: 319px) {
+    width: 100%;
+    min-width: auto;
+  }
 
   @include scale-on-hover;
 
