@@ -11,7 +11,11 @@
   background-color: $color-white;
   height: 100%;
 
-  width: 272px;
+  /* 🌟 На мобілках займає 100% ширини сітки (288px між падінгами),
+     а на більших екранах обмежується max-width: 272px */
+  width: 100%;
+  max-width: 272px;
+  margin: 0 auto;
   box-sizing: border-box;
 
   @include scale-on-hover;

@@ -45,9 +45,13 @@ min-height: 100vh;
 }
 
 .main {
-  padding-top: 60px;
+  padding-top: 74px; // 50px header + 24px gap
   flex-grow: 1;
   background-color: #FAFBFC;
+
+  @include on-desktop {
+    padding-top: 96px; // 64px header + 32px gap
+  }
 }
 
 

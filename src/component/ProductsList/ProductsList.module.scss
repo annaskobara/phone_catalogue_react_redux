@@ -8,18 +8,26 @@ a {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-top: 24px;
-  padding-bottom: 64px;
   width: 100%;
   box-sizing: border-box;
 
-  @include padding-inline;
+  padding-top: 24px;
+  padding-bottom: 64px;
+  padding-inline: 16px;
 
+  @include on-tablet {
+    padding-top: 32px;
+    padding-inline: 24px;
+  }
 
-  @media (min-width: 1024px) {
-    margin-left: 0 auto;
-    justify-content: center;
+  @include on-desktop {
+    padding-top: 40px;
+    padding-inline: 32px;
+    margin: 0;
+  }
 
+  @include on-big-desktop {
+    padding-inline: 152px;
   }
 
   &__title {
@@ -29,44 +37,50 @@ a {
   }
 
   &__text {
-    color: #89939A;
-    font-size: 14px;
+    color: #89939a;
     font-weight: 600;
+    font-size: 14px;
   }
 
   &__select {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    margin: 16px;
-
+    margin-bottom: 24px;
 
     @include on-tablet {
       grid-template-columns: 187px 136px;
-      margin: 16px;
-
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: 176px 128px;
-      margin: 16px;
     }
   }
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(1, 272px);
+    grid-template-columns: repeat(1, 1fr);
     gap: 24px 16px;
+    width: 100%;
+
+    /* 🌟 Центруємо картки на мобілці (320px) */
+    justify-items: center;
     justify-content: center;
 
-    @include on-tablet {
-      grid-template-columns: repeat(2, 272px);
+    /* 📱 2 колонки (640px - 767px) */
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-items: stretch;
     }
 
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 272px);
+    /* 📱 3 колонки (768px - 1199px) */
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 40px 16px;
+      justify-items: stretch;
+    }
+
+    /* 💻 4 колонки (від 1200px) */
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 272px);
       justify-content: flex-start;
+      justify-items: start;
     }
   }
 }
